@@ -1,0 +1,19 @@
+{
+  "name": "backend",
+  "module": "index.js",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.888.0",
+    "aws-sdk": "^2.1692.0",
+    "dotenv": "^17.2.2",
+    "livekit-server-sdk": "^2.13.3",
+    "openai": "^5.20.2",
+    "uuid": "^13.0.0"
+  }
+}
