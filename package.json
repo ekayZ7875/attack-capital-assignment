@@ -8,12 +8,20 @@
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
+  "scripts": {
+    "dev": "nodemon index.js",
+    "seeders": "node seeds/trip.seeders.js"
+  },
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.888.0",
+    "@aws-sdk/lib-dynamodb": "^3.888.0",
     "aws-sdk": "^2.1692.0",
+    "chalk": "^5.6.2",
     "dotenv": "^17.2.2",
     "livekit-server-sdk": "^2.13.3",
+    "morgan": "^1.10.1",
     "openai": "^5.20.2",
-    "uuid": "^13.0.0"
+    "uuid": "^13.0.0",
+    "winston": "^3.17.0"
   }
 }

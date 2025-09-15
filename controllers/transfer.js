@@ -2,7 +2,7 @@ import express from "express";
 const router = express.Router();
 
 import { createRoomIfNotExists, generateToken } from "../services/liveKitService.js";
-import { generateSummary } from "../services/llmService.js";
+import generateSummary  from "../services/llmService.js";
 import { saveSummary, createTransfer, updateCall, getCall } from "../config/dynamoDb.js";
 import { v4 as uuidv4 } from "uuid";
 
@@ -23,7 +23,6 @@ router.post("/initiate", async (req, res) => {
     await createRoomIfNotExists(transferRoom);
 
     // 2) Generate summary using transcript (either pulled from DB or provided)
-    // If transcriptText not provided, try to fetch call and maybe pre-existing transcript reference (optional)
     let transcriptSourceText = transcriptText;
     if (!transcriptSourceText) {
       // Attempt to pull brief context from the Calls table if present (non-blocking)

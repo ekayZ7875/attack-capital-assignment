@@ -1,4 +1,4 @@
-import OpenAI from('openai');
+import OpenAI from 'openai'
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 async function generateSummary(transcriptText, maxTokens = 400) {
@@ -15,4 +15,4 @@ async function generateSummary(transcriptText, maxTokens = 400) {
   return text;
 }
 
-module.exports = { generateSummary };
+export default generateSummary
